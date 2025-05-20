@@ -26,7 +26,7 @@ class Footer extends Component {
               <FaEnvelope />
             </a>
             <a 
-              href="https://ifdc.org/solutions/" 
+              href="" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-light mx-3 fs-3"
@@ -35,7 +35,7 @@ class Footer extends Component {
               <FaGlobeAfrica />
             </a>
             <a 
-              href="https://www.cgiar.org/" 
+              href="" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-light mx-3 fs-3"
