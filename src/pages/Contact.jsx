@@ -69,23 +69,23 @@ class Contact extends Component {
                       <FaEnvelope className="me-2" /> info@utopiafertilizer.com
                     </li>
                     <li>
-                      <FaPhoneAlt className="me-2" /> +91-960572142
+                      <FaPhoneAlt className="me-2" /> +251-960572142
                     </li>
                     <li>
-                      <FaMapMarkerAlt className="me-2" /> 123 Green Avenue, AgriTech Park, Jaipur, Rajasthan, India
+                      <FaMapMarkerAlt className="me-2" /> Piassa Arada Building, Addis Ababa, Ethiopia
                     </li>
                   </ul>
 
                   {/* Social & Resource Links */}
                   <div className="social-links mt-4">
-                    <a href="https://wa.me/91960572142" target="_blank" rel="noopener noreferrer" className="me-3" title="WhatsApp">
+                    <a href="https://wa.me/251960572142" target="_blank" rel="noopener noreferrer" className="me-3" title="WhatsApp">
                       <FaWhatsapp size={28} />
                     </a>
-                    <a href="https://ifdc.org/solutions/" target="_blank" rel="noopener noreferrer" className="me-3" title="IFDC Solutions">
+                    <a href="https://www.linkedin.com/company/utopia-fertilizer" target="_blank" rel="noopener noreferrer" className="me-3" title="LinkedIn">
                       <FaGlobeAfrica size={28} />
                     </a>
-                    <a href="https://www.cgiar.org/" target="_blank" rel="noopener noreferrer" title="CGIAR">
-                      <FaGlobeAfrica size={28} color="#b7e778" />
+                    <a href="mailto:info@utopiafertilizer.com" target="_blank" rel="noopener noreferrer" title="Email">
+                      <FaEnvelope size={28} color="#b7e778" />
                     </a>
                   </div>
 
@@ -106,7 +106,7 @@ class Contact extends Component {
                 {/* Map Embed */}
                 <Card className="mt-4 map-card shadow overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.232659195254!2d75.78981777513204!3d26.861603676674055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db4ac3dbab1cf%3A0x6eb7eb9c2eea93d9!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1694498445086!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3405950397955!2d38.749995773612106!3d9.032662088934519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b855999d29f4b%3A0x99338fc20315ddde!2sPiassa%20Arada%20building!5e0!3m2!1sen!2set!4v1747763452993!5m2!1sen!2set"
                     width="100%"
                     height="250"
                     style={{ border: 0 }}
