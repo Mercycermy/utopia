@@ -1,0 +1,120 @@
+:root {
+    --utopia-green: #6dbb63;
+    --utopia-dark: #234d20;
+    --utopia-light: #f4fbe7;
+    --utopia-earth: #eaf6e0;
+    --utopia-accent: #b7e778;
+    --utopia-white: #ffffff;
+    --utopia-gray: #3d6b2f;
+}
+  
+.services-hero {
+    background: linear-gradient(90deg, #5fa948 0%, #b7e778 100%);
+    color: var(--utopia-dark);
+    text-align: center;
+    padding: 80px 0;
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite;
+}
+.services-hero h1 {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    color: var(--utopia-dark);
+}
+.services-hero p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: var(--utopia-gray);
+}
+.services-hero .btn {
+    background: var(--utopia-dark);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.services-hero .btn:hover {
+    background: var(--utopia-green);
+    color: var(--utopia-dark);
+}
+
+/* Products Categories */
+.services-categories {
+    background: var(--utopia-light);
+}
+.services-categories h2 {
+    color: var(--utopia-dark);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.service-category-card {
+    background: var(--utopia-white);
+    border-radius: 14px;
+    box-shadow: 0px 8px 24px rgba(34,77,32,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--utopia-dark);
+}
+.service-category-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0px 16px 36px rgba(34,77,32,0.13);
+    background: var(--utopia-accent);
+}
+.service-category-icon {
+    color: var(--utopia-green);
+}
+.service-category-card li {
+    margin-bottom: 0.5rem;
+    color: var(--utopia-gray);
+}
+
+/* FAQs */
+.services-faqs {
+    background: var(--utopia-earth);
+}
+.services-faqs h2 {
+    color: var(--utopia-dark);
+    font-weight: bold;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--utopia-white);
+    background-color: var(--utopia-green);
+}
+.accordion-button {
+    font-weight: bold;
+    color: var(--utopia-dark);
+}
+.accordion-body {
+    color: var(--utopia-gray);
+}
+
+/* Final CTA */
+.services-final-cta {
+    background: var(--utopia-light);
+}
+.services-final-cta h2 {
+    color: var(--utopia-dark);
+    font-weight: bold;
+}
+.services-final-cta .btn {
+    background: var(--utopia-green);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.services-final-cta .btn:hover {
+    background: var(--utopia-dark);
+    color: #fff;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+

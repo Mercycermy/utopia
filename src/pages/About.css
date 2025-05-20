@@ -1,0 +1,204 @@
+/* Utopia Fertilizer Solutions - About Page Styles */
+:root {
+    --utopia-green: #6dbb63;
+    --utopia-dark: #234d20;
+    --utopia-light: #f4fbe7;
+    --utopia-earth: #eaf6e0;
+    --utopia-accent: #b7e778;
+    --utopia-white: #ffffff;
+    --utopia-gray: #3d6b2f;
+}
+
+.about-page {
+    background-color: var(--utopia-light);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    color: var(--utopia-gray);
+}
+
+/* Section Headings */
+.about-page h2,
+.about-page h3 {
+    color: var(--utopia-dark);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.about-page h2::after,
+.about-page h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--utopia-green);
+    margin: 0.5rem auto 1.5rem;
+    border-radius: 2px;
+}
+
+/* Bio & Journey Cards */
+.bio-card, .journey-card {
+    border: none;
+    background: var(--utopia-green);
+    color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 18px rgba(34,77,32,0.09);
+}
+.bio-card:hover, .journey-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(34,77,32,0.13);
+}
+.journey-card {
+    background: var(--utopia-accent);
+    color: var(--utopia-dark);
+}
+
+/* Icon Container for Values */
+.icon-container {
+    text-align: center;
+    padding: 36px 24px;
+    background: var(--utopia-earth);
+    border-radius: 14px;
+    box-shadow: 0px 8px 28px rgba(34, 77, 32, 0.08);
+    margin-bottom: 28px;
+    transition: transform 0.2s;
+    color: var(--utopia-dark);
+}
+.icon-container:hover {
+    transform: translateY(-6px) scale(1.03);
+    background: var(--utopia-accent);
+}
+.icon-container h5 {
+    font-size: 1.15rem;
+    margin-top: 18px;
+    font-weight: bold;
+    color: var(--utopia-dark);
+}
+.icon-container p {
+    font-size: 1.05rem;
+    color: var(--utopia-gray);
+    margin-top: 10px;
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 30px;
+    border-left: 3px solid var(--utopia-green);
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 30px;
+}
+.timeline-year {
+    position: absolute;
+    left: -90px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--utopia-green);
+    color: white;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+}
+.timeline-icon {
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 3px solid var(--utopia-green);
+    color: var(--utopia-green);
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+.timeline-content {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    font-size: 1rem;
+    color: #234d20;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline-container {
+        padding-left: 20px;
+        border-left: 2px solid var(--utopia-green);
+    }
+    .timeline-year {
+        left: -70px;
+        font-size: 0.8rem;
+    }
+    .timeline-icon {
+        left: -25px;
+        font-size: 1rem;
+    }
+    .timeline-content {
+        font-size: 0.9rem;
+    }
+}
+
+/* Service Cards */
+.service-card {
+    background: var(--utopia-white);
+    border-radius: 14px;
+    box-shadow: 0px 6px 22px rgba(34,77,32,0.06);
+    transition: transform 0.3s ease;
+    padding: 28px 20px;
+    color: var(--utopia-dark);
+}
+.service-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: var(--utopia-accent);
+}
+.service-icon {
+    color: var(--utopia-green);
+    font-size: 2.2rem;
+}
+
+/* Achievements List */
+.achievement-item {
+    background: var(--utopia-earth);
+    border: none;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+    color: var(--utopia-dark);
+    font-weight: 500;
+}
+.achievement-item:hover {
+    background: var(--utopia-accent);
+}
+.achievement-item .text-warning {
+    color: #ffc107;
+}
+
+/* Contact CTA */
+.contact-section .btn-primary {
+    background: var(--utopia-dark);
+    border: none;
+    transition: background 0.3s;
+}
+.contact-section .btn-primary:hover {
+    background: var(--utopia-green);
+}
+.social-links a {
+    color: var(--utopia-green);
+    margin: 0 0.75rem;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: var(--utopia-accent);
+}

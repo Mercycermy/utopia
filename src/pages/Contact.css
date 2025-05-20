@@ -1,0 +1,153 @@
+:root {
+    --utopia-green: #6dbb63;
+    --utopia-dark: #234d20;
+    --utopia-light: #f4fbe7;
+    --utopia-earth: #eaf6e0;
+    --utopia-accent: #b7e778;
+    --utopia-white: #ffffff;
+    --utopia-gray: #3d6b2f;
+}
+
+.contact-page {
+    background: var(--utopia-light);
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+.contact-page h2 {
+    color: var(--utopia-dark);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.contact-page h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--utopia-green);
+    margin: 0.5rem auto 1.5rem;
+    border-radius: 2px;
+}
+
+/* Card Styles */
+.contact-form-card, .contact-info-card, .map-card {
+    border-radius: 15px;
+    background: var(--utopia-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(34,77,32,0.09);
+    border: none;
+}
+
+.contact-form-card:hover,
+.contact-info-card:hover,
+.map-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0px 16px 32px rgba(34,77,32,0.13);
+}
+
+/* Form Inputs */
+.contact-form-card input,
+.contact-form-card textarea {
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: var(--utopia-light);
+    border: 1px solid var(--utopia-accent);
+    color: var(--utopia-dark);
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+    border-color: var(--utopia-green);
+    outline: none;
+    background: #f9fff6;
+}
+
+/* Button Styling */
+.contact-form-card button,
+.contact-info-card .btn,
+.calendar-box .btn {
+    border-radius: 30px;
+    font-weight: bold;
+    background: var(--utopia-green);
+    color: #fff;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+.contact-form-card button:hover,
+.contact-info-card .btn:hover,
+.calendar-box .btn:hover {
+    background: var(--utopia-dark);
+    color: #fff;
+}
+
+/* Info Card */
+.contact-info-card {
+    background: var(--utopia-accent);
+    color: var(--utopia-dark);
+    text-align: center;
+    padding: 2rem 1.5rem;
+}
+.contact-info-card h4 {
+    color: var(--utopia-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.contact-info-card p {
+    color: var(--utopia-gray);
+    font-size: 1.05rem;
+}
+.contact-info-card .info-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+.contact-info-card .info-list li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-info-card .info-list svg {
+    color: var(--utopia-green);
+    margin-right: 8px;
+}
+
+/* Social Links */
+.social-links a {
+    color: var(--utopia-green);
+    margin-right: 18px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: var(--utopia-dark);
+}
+
+/* Calendar Box */
+.calendar-box {
+    margin-top: 30px;
+    padding: 15px;
+    background: var(--utopia-earth);
+    border-radius: 10px;
+    color: var(--utopia-dark);
+}
+
+/* Map Card */
+.map-card iframe {
+    border-radius: 15px;
+    width: 100%;
+    min-height: 250px;
+    border: none;
+    box-shadow: 0 2px 12px rgba(34,77,32,0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-form-card, .contact-info-card, .map-card {
+        margin-bottom: 1.5rem;
+    }
+}
