@@ -34,6 +34,15 @@ class Home extends Component {
                                     Utopia – Sustainable Fertilizer Solutions for Ethiopia
                                 </motion.h1>
                                 
+                                <motion.p
+                                    className="hero-description"
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 1.2 }}
+                                >
+                                    Empowering Ethiopian farmers and communities with innovative, eco-friendly fertilizers for a food-secure future.
+                                </motion.p>
+
                                 <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
