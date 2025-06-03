@@ -8,8 +8,8 @@ import FixedButtons from './components/FixedButtons';
 // (Placeholder pages for now)
 import Home from './pages/Home';
 import About from './pages/About';
-import Initiatives from './pages/Projects'; // Projects.jsx now serves Initiatives
-import Products from './pages/Services';    // Services.jsx now serves Products
+import Initiatives from './pages/Initiative'; // Initiative.jsx now serves Initiatives
+import Products from './pages/Product';    // Services.jsx now serves Products
 import Contact from './pages/Contact';
 
 

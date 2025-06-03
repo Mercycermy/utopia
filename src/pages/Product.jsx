@@ -13,15 +13,16 @@ class Products extends Component {
       transition: { duration: 0.8 }
     };
 
-    // Utopia Fertilizer Product List
+    // Utopia Fertilizer Product List 
     const productsList = [
       {
-        name: 'EcoGrow NPK Blend',
+        name: 'Utopia Organic NPKC Fertilizer',
         icon: FaLeaf,
         features: [
-          'Balanced nutrients for all major crops',
-          'Slow-release formula for sustained growth',
-          'Eco-friendly and soil-safe'
+          '100% organic, locally produced in Ethiopia',
+          'Balanced nutrients: Nitrogen, Phosphorus, Potassium, Carbon',
+          'Restores soil health and fertility',
+          'Safe for all major Ethiopian crops'
         ],
       },
       {
@@ -30,25 +31,28 @@ class Products extends Component {
         features: [
           'Improves soil structure and fertility',
           'Enhances microbial activity',
-          'Reduces soil degradation'
+          'Reduces soil degradation',
+          'Ideal for Ethiopian smallholder farms'
         ],
       },
       {
         name: 'ClimateSmart Fertilizer',
         icon: FaCloudSun,
         features: [
-          'Optimized for climate resilience',
+          'Optimized for climate resilience in Ethiopia',
           'Reduces greenhouse gas emissions',
-          'Supports sustainable agriculture'
+          'Supports sustainable agriculture',
+          'Boosts yields under changing weather'
         ],
       },
       {
         name: 'Custom Crop Solutions',
         icon: FaFlask,
         features: [
-          'Tailored blends for specific crops and regions',
-          'Field-tested for maximum yield',
-          'Expert agronomist support'
+          'Tailored blends for teff, maize, wheat, and more',
+          'Field-tested for Ethiopian soils',
+          'Expert agronomist support',
+          'Maximizes crop-specific yield'
         ],
       },
       {
@@ -57,16 +61,18 @@ class Products extends Component {
         features: [
           'Step-by-step guides for best practices',
           'Nutrient management education',
-          'Workshops and demo plots'
+          'Workshops and demo plots in Ethiopia',
+          'Empowers women and youth farmers'
         ],
       },
       {
         name: 'Supply Chain Consulting',
         icon: FaGlobeAfrica,
         features: [
-          'Sustainable sourcing strategies',
+          'Sustainable sourcing strategies for Ethiopia',
           'Distribution network optimization',
-          'Traceability and impact reporting'
+          'Traceability and impact reporting',
+          'Community and environmental focus'
         ],
       },
     ];
@@ -74,15 +80,15 @@ class Products extends Component {
     const faqs = [
       {
         question: 'Are Utopia fertilizers safe for the environment?',
-        answer: 'Yes, all our products are designed to be eco-friendly, supporting soil health and minimizing environmental impact.'
+        answer: 'Yes, all our products are 100% organic and eco-friendly, supporting soil health and minimizing environmental impact in Ethiopia.'
       },
       {
         question: 'Can I get a custom fertilizer blend for my crop?',
-        answer: 'Absolutely! Our agronomists will work with you to create a blend tailored to your soil and crop needs.'
+        answer: 'Absolutely! Our agronomists will work with you to create a blend tailored to your soil and crop needs, especially for Ethiopian conditions.'
       },
       {
         question: 'Do you provide training for farmers?',
-        answer: 'Yes, we offer training kits, workshops, and ongoing support to help farmers maximize yields sustainably.'
+        answer: 'Yes, we offer training kits, workshops, and ongoing support to help Ethiopian farmers maximize yields sustainably.'
       },
     ];
 
@@ -93,9 +99,9 @@ class Products extends Component {
           <Container>
             <h1 className="display-5 fw-bold">Utopia Fertilizer Products</h1>
             <p className="lead mt-3">
-              Innovative, sustainable, and science-backed solutions for a food-secure future.
+              100% organic, locally produced solutions for Ethiopia’s soil revival and food security.
             </p>
-            <Button variant="success" href=" /utopia/contact" className="mt-4 px-4 rounded-pill" style={{ background: '#234d20', border: 'none' }}>
+            <Button variant="success" href="/utopia/contact" className="mt-4 px-4 rounded-pill" style={{ background: '#234d20', border: 'none' }}>
               Request a Consultation
             </Button>
           </Container>
@@ -146,7 +152,7 @@ class Products extends Component {
         <section className="services-final-cta text-center py-5">
           <Container>
             <h2>Ready to Grow with Utopia?</h2>
-            <Button variant="primary" href=" /utopia/contact" className="mt-3 px-4 rounded-pill" style={{ background: '#6dbb63', border: 'none' }}>
+            <Button variant="primary" href="/utopia/contact" className="mt-3 px-4 rounded-pill" style={{ background: '#6dbb63', border: 'none' }}>
               Contact Our Team
             </Button>
           </Container>

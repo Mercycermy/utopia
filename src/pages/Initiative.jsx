@@ -6,8 +6,9 @@ import './Home.css'; // Reuse main styles for consistency
 import projectalpha1 from '../assets/projectalpha1.png';
 import betaapp from '../assets/betaapp.png';
 import aboutImage from '../assets/aboutus.jpg';
+import womanImage from '../assets/woman.jpg';
 
-class Projects extends Component {
+class Initiative extends Component {
   render() {
     const fadeIn = {
       initial: { opacity: 0, y: 30 },
@@ -15,34 +16,31 @@ class Projects extends Component {
       transition: { duration: 0.7 }
     };
 
-    const projects = [
+    // Updated initiatives based on notes.md and Ethiopia focus
+    const initiatives = [
       {
-        title: 'Africa Soil Health Initiative',
+        title: 'Restoring Degraded Land',
         img: projectalpha1,
-        desc: 'Boosting soil fertility and crop yields across Africa through innovative fertilizer solutions and farmer partnerships.',
-        tags: ['Soil Science', 'Farmer Training', 'Sustainability'],
-        link: 'https://ifdc.org/solutions/'
+        desc: 'Rehabilitating Ethiopia’s arable land affected by acidity and salinity with organic NPKC fertilizers.',
+        tags: ['Soil Restoration', 'Organic Inputs', 'Sustainability'],
       },
       {
-        title: 'Rice Productivity Program',
+        title: 'Empowering Smallholder Farmers',
         img: betaapp,
-        desc: 'Empowering rice farmers with tailored nutrient management, field trials, and modern agricultural practices.',
-        tags: ['Nutrient Management', 'Field Trials', 'Capacity Building'],
-        link: 'https://www.cgiar.org/'
+        desc: 'Training and supporting smallholder farmers for higher yields and sustainable livelihoods.',
+        tags: ['Farmer Training', 'Community Impact', 'Food Security'],
       },
       {
-        title: 'Women in Agriculture Empowerment',
-        img: aboutImage,
-        desc: 'Supporting women farmers with resources, training, and leadership opportunities for inclusive growth.',
-        tags: ['Gender Equality', 'Training', 'Community Impact'],
-        link: 'https://ifdc.org/solutions/'
+        title: 'Women & Youth in Agriculture',
+        img: womanImage,
+        desc: 'Creating jobs and leadership opportunities for women and youth in Ethiopia’s green economy.',
+        tags: ['Gender Equality', 'Youth Jobs', 'Education'],
       },
       {
-        title: 'Global Soil Fertility Network',
+        title: 'Climate & Biodiversity Action',
         img: projectalpha1,
-        desc: 'Collaborating globally to advance soil health, sustainable agriculture, and food security.',
-        tags: ['Research', 'Partnerships', 'Innovation'],
-        link: 'https://www.cgiar.org/'
+        desc: 'Reducing emissions, increasing biodiversity, and building climate resilience through organic practices.',
+        tags: ['Climate Action', 'Biodiversity', 'Eco Farming'],
       }
     ];
 
@@ -58,7 +56,7 @@ class Projects extends Component {
             Utopia Initiatives
           </motion.h2>
           <Row className="g-4">
-            {projects.map((proj, i) => (
+            {initiatives.map((proj, i) => (
               <Col md={6} lg={3} key={i}>
                 <motion.div
                   className="proj-card"
@@ -78,7 +76,7 @@ class Projects extends Component {
                       <div className="proj-overlay">
                         <Button
                           as="a"
-                          href="/utopia/products"
+                          href="/utopia/contact"
                           className="overlay-btn"
                         >
                           Learn More <FaArrowRight className="ms-2" />
@@ -104,7 +102,7 @@ class Projects extends Component {
           <div className="text-center mt-5">
             <Button
               as="a"
-              href=" /utopia/products"
+              href="/utopia/products"
               className="cta-btn"
               style={{ background: "#234d20", border: "none" }}
             >
@@ -117,4 +115,4 @@ class Projects extends Component {
   }
 }
 
-export default Projects;
+export default Initiative;

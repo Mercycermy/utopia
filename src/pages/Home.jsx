@@ -7,6 +7,7 @@ import './Home.css';
 import aboutImage from '../assets/aboutus.jpg';
 import projectalpha1 from '../assets/projectalpha1.png';
 import betaapp from '../assets/betaapp.png';
+import womanImage from '../assets/woman.jpg';
 
 class Home extends Component {
     render() {
@@ -31,7 +32,7 @@ class Home extends Component {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 1 }}
                                 >
-                                    Utopia – Sustainable Fertilizer Solutions for Ethiopia
+                                    Utopia Organic Fertilizer Production Company (UOF)
                                 </motion.h1>
                                 
                                 <motion.p
@@ -40,7 +41,8 @@ class Home extends Component {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 1.2 }}
                                 >
-                                    Empowering Ethiopian farmers and communities with innovative, eco-friendly fertilizers for a food-secure future.
+                                    Fashioning Paradise Ethiopia through Organic Soil Revival.<br />
+                                    Restoring soil health, food security, and environmental balance with 100% organic, locally produced NPKC fertilizers.
                                 </motion.p>
 
                                 <motion.div
@@ -57,10 +59,10 @@ class Home extends Component {
                         {/* Solutions/Impact Cards */}
                         <Row className="mt-5">
                             {[
-                                { icon: FaSeedling, title: 'Soil Health Improvement', text: 'Enhancing soil fertility and structure for sustainable yields in Ethiopia.' },
-                                { icon: FaLeaf, title: 'Nutrient Management', text: 'Balanced, science-based fertilizer blends for Ethiopian crops.' },
-                                { icon: FaHandsHelping, title: 'Farmer Training & Support', text: 'Empowering Ethiopian farmers with knowledge and resources.' },
-                                { icon: FaCloudSun, title: 'Climate-Smart Agriculture', text: 'Innovative practices for resilience and sustainability in Ethiopia.' },
+                                { icon: FaSeedling, title: 'Soil is Life', text: 'Healthy, natural soil is the foundation for water, air, and food security in Ethiopia.' },
+                                { icon: FaLeaf, title: 'Organic NPKC Fertilizer', text: '100% organic, eco-friendly, and locally sourced—restoring soil fertility and plant health.' },
+                                { icon: FaHandsHelping, title: 'Empowering Farmers', text: 'Supporting Ethiopian farmers and communities with training, jobs, and sustainable solutions.' },
+                                { icon: FaCloudSun, title: 'Environmental Restoration', text: 'Regenerating land, increasing biodiversity, and building climate resilience.' },
                             ].map((item, idx) => (
                                 <Col md={3} key={idx}>
                                     <motion.div className="icon-container"
@@ -89,7 +91,7 @@ class Home extends Component {
                                     <Card className="about-card shadow-lg p-4">
                                         <Card.Body>
                                             <Card.Text>
-                                                Utopia is dedicated to transforming Ethiopian agriculture through science-based fertilizer solutions, improving yields, and supporting sustainable development nationwide. Our mission is to empower Ethiopian farmers, protect the environment, and ensure food security for future generations in Ethiopia.
+                                                At Utopia, we believe the foundation of life is healthy soil. Our mission is to restore Ethiopia’s land and ecosystems by producing organic NPKC fertilizers from natural, local resources. We empower farmers, regenerate the environment, and strive for a food-secure, sustainable future. Our vision: “To transform Ethiopia into a paradise for development through joint power and wisdom.”
                                             </Card.Text>
                                             <Button as={Link} to="/products" variant="outline-light" className="about-btn">
                                                 Learn More
@@ -120,32 +122,32 @@ class Home extends Component {
                         <Row className="g-4">
                             {[
                                 {
-                                    title: 'Ethiopia Soil Health Initiative',
+                                    title: 'Restoring Degraded Land',
                                     img: projectalpha1,
-                                    desc: 'Boosting soil fertility and crop yields across Ethiopia through innovative fertilizer solutions.',
-                                    tech: ['Soil Science', 'Farmer Training', 'Sustainability'],
-                                    link: '/projects/ethiopia-soil-health'
+                                    desc: 'Rehabilitating Ethiopia’s arable land affected by acidity and salinity with organic NPKC fertilizers.',
+                                    tech: ['Soil Restoration', 'Organic Inputs', 'Sustainability'],
+                                    link: '/projects/ethiopia-soil-restoration'
                                 },
                                 {
-                                    title: 'Teff Productivity Program',
+                                    title: 'Empowering Smallholder Farmers',
                                     img: betaapp,
-                                    desc: 'Empowering teff farmers with tailored nutrient management and modern practices.',
-                                    tech: ['Nutrient Management', 'Field Trials', 'Capacity Building'],
-                                    link: '/projects/teff-productivity'
+                                    desc: 'Training and supporting smallholder farmers for higher yields and sustainable livelihoods.',
+                                    tech: ['Farmer Training', 'Community Impact', 'Food Security'],
+                                    link: '/projects/farmer-empowerment'
                                 },
                                 {
-                                    title: 'Women in Ethiopian Agriculture',
-                                    img: aboutImage,
-                                    desc: 'Supporting Ethiopian women farmers with resources, training, and leadership opportunities.',
-                                    tech: ['Gender Equality', 'Training', 'Community Impact'],
-                                    link: '/projects/women-ethiopia'
+                                    title: 'Women & Youth in Agriculture',
+                                    img: womanImage,
+                                    desc: 'Creating jobs and leadership opportunities for women and youth in Ethiopia’s green economy.',
+                                    tech: ['Gender Equality', 'Youth Jobs', 'Education'],
+                                    link: '/projects/women-youth-agriculture'
                                 },
                                 {
-                                    title: 'National Soil Fertility Network',
+                                    title: 'Climate & Biodiversity Action',
                                     img: projectalpha1,
-                                    desc: 'Collaborating across Ethiopia to advance soil health and sustainable agriculture.',
-                                    tech: ['Research', 'Partnerships', 'Innovation'],
-                                    link: '/projects/national-soil-fertility'
+                                    desc: 'Reducing emissions, increasing biodiversity, and building climate resilience through organic practices.',
+                                    tech: ['Climate Action', 'Biodiversity', 'Eco Farming'],
+                                    link: '/projects/climate-biodiversity'
                                 }
                             ].map((proj, i) => (
                                 <Col md={6} lg={3} key={i}>
@@ -193,29 +195,29 @@ class Home extends Component {
                 <section className="services-overview py-5 bg-light">
                     <Container>
                         <motion.div {...scrollAnim}>
-                            <h2 className="text-center mb-4">Our Services</h2>
+                            <h2 className="text-center mb-4">Our Solutions</h2>
                         </motion.div>
                         <Row className="g-4">
                             {[
                                 {
                                     icon: FaFlask,
-                                    title: 'Custom Fertilizer Blends',
-                                    desc: 'Tailored nutrient solutions for Ethiopia’s diverse crops and soils.',
+                                    title: 'Organic NPKC Fertilizer',
+                                    desc: 'Balanced, 100% organic fertilizer with Nitrogen, Phosphorus, Potassium, and Carbon for soil health.',
                                 },
                                 {
                                     icon: FaChartLine,
-                                    title: 'Field Research & Trials',
-                                    desc: 'On-site testing in Ethiopia to ensure optimal results and innovation.',
+                                    title: 'Farmer Training & Consulting',
+                                    desc: 'Workshops, demo plots, and expert support for sustainable farming and soil management.',
                                 },
                                 {
                                     icon: FaUsers,
-                                    title: 'Farmer Education Workshops',
-                                    desc: 'Training programs to empower Ethiopian farmers with best practices.',
+                                    title: 'Community Empowerment',
+                                    desc: 'Job creation, youth and women engagement, and rural economic growth.',
                                 },
                                 {
                                     icon: FaGlobeAfrica,
-                                    title: 'Sustainable Supply Chain Consulting',
-                                    desc: 'Building resilient, eco-friendly supply chains for Ethiopian agriculture.',
+                                    title: 'Environmental Restoration',
+                                    desc: 'Land rehabilitation, biodiversity, and climate resilience for Ethiopia’s future.',
                                 },
                             ].map((svc, i) => (
                                 <Col md={3} key={i}>
@@ -230,7 +232,7 @@ class Home extends Component {
                                         <p className="text-muted">{svc.desc}</p>
                                         <Button
                                             as={Link}
-                                            to="/services"
+                                            to="/products"
                                             variant="outline-primary"
                                             size="sm"
                                             className="mt-3"
@@ -255,19 +257,19 @@ class Home extends Component {
                                 {
                                     name: 'Amina K.',
                                     company: 'Smallholder Farmer, Oromia, Ethiopia',
-                                    feedback: 'Utopia’s fertilizers have transformed my harvests. The training and support made all the difference for my family.',
+                                    feedback: 'Utopia’s organic fertilizer revived my land and doubled my harvest. I now have hope for my children’s future.',
                                     rating: 5,
                                 },
                                 {
                                     name: 'Dr. Samuel O.',
                                     company: 'Agricultural Scientist, Addis Ababa, Ethiopia',
-                                    feedback: 'Their science-based approach and commitment to sustainability set a new standard in Ethiopia.',
+                                    feedback: 'Their science-based, eco-friendly approach is a model for sustainable agriculture in Ethiopia.',
                                     rating: 5,
                                 },
                                 {
                                     name: 'Maria G.',
                                     company: 'NGO Partner, Ethiopia',
-                                    feedback: 'Working with Utopia has empowered hundreds of women farmers in our region. True impact!',
+                                    feedback: 'Utopia’s training and community programs have empowered hundreds of women and youth in our region.',
                                     rating: 5,
                                 }
                             ].map((testimonial, idx) => (
@@ -300,10 +302,10 @@ class Home extends Component {
                         </motion.div>
                         <Row className="g-4 justify-content-center">
                             {[
-                                { step: '1', title: 'Research & Innovation', desc: 'Developing advanced, eco-friendly fertilizer solutions.' },
-                                { step: '2', title: 'Field Implementation', desc: 'Partnering with farmers for real-world results.' },
-                                { step: '3', title: 'Capacity Building', desc: 'Training and empowering communities.' },
-                                { step: '4', title: 'Impact Assessment', desc: 'Measuring outcomes and refining our approach.' },
+                                { step: '1', title: 'Soil Restoration', desc: 'Reviving degraded land with organic inputs and natural soil biology.' },
+                                { step: '2', title: 'Farmer Empowerment', desc: 'Training, consulting, and supporting Ethiopian farmers for sustainable growth.' },
+                                { step: '3', title: 'Community Impact', desc: 'Creating jobs, supporting women and youth, and building rural prosperity.' },
+                                { step: '4', title: 'Environmental Sustainability', desc: 'Reducing emissions, restoring biodiversity, and building climate resilience.' },
                             ].map((process, idx) => (
                                 <Col md={6} lg={3} key={idx}>
                                     <motion.div

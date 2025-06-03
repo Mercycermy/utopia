@@ -15,51 +15,51 @@ class About extends Component {
       transition: { duration: 0.6 }
     };
 
-    // Utopia company values and impact
+    // Utopia company values and impact (Ethiopia-focused)
     const values = [
       {
         icon: <FaLeaf size={32} color="#6dbb63" />,
         title: "Sustainable Solutions",
-        desc: "We develop eco-friendly fertilizers that boost yields while protecting the environment."
+        desc: "We develop eco-friendly, organic fertilizers that restore Ethiopia’s soils and boost yields while protecting the environment."
       },
       {
         icon: <FaHandsHelping size={32} color="#6dbb63" />,
         title: "Farmer Empowerment",
-        desc: "Training, resources, and support for farmers to thrive and adopt best practices."
+        desc: "Training, resources, and support for Ethiopian farmers to thrive and adopt best practices."
       },
       {
         icon: <FaCloudSun size={32} color="#6dbb63" />,
         title: "Climate-Smart Agriculture",
-        desc: "Innovative approaches for resilience and food security in a changing climate."
+        desc: "Innovative approaches for resilience, food security, and environmental restoration in Ethiopia."
       },
       {
         icon: <FaGlobeAfrica size={32} color="#6dbb63" />,
-        title: "Global Impact",
-        desc: "Collaborating with partners worldwide to improve soil health and livelihoods."
+        title: "Local Impact",
+        desc: "Transforming communities across Ethiopia through soil revival and sustainable agriculture."
       }
     ];
 
-    // Utopia milestones/timeline
+    // Utopia milestones/timeline (Ethiopia-focused)
     const timeline = [
-      { year: '2015', text: 'Founded with a mission to transform agriculture sustainably.', icon: <FaFlask /> },
-      { year: '2017', text: 'Launched Africa Soil Health Initiative.', icon: <FaGlobeAfrica /> },
-      { year: '2020', text: 'Empowered 50,000+ farmers through training and support.', icon: <FaHandsHelping /> },
-      { year: '2024', text: 'Expanded global partnerships for climate-smart agriculture.', icon: <FaCloudSun /> },
+      { year: '2015', text: 'Founded in Ethiopia with a mission to revive soils and transform agriculture.', icon: <FaFlask /> },
+      { year: '2017', text: 'Launched “Fashioning Paradise Ethiopia through Organic Soil Revival”.', icon: <FaGlobeAfrica /> },
+      { year: '2020', text: 'Empowered thousands of Ethiopian farmers through training and support.', icon: <FaHandsHelping /> },
+      { year: '2024', text: 'Expanded organic fertilizer production and community partnerships nationwide.', icon: <FaCloudSun /> },
     ];
 
-    // Utopia services
+    // Utopia services (Ethiopia-focused)
     const services = [
-      { icon: <FaFlask />, title: 'Custom Fertilizer Blends', desc: 'Tailored nutrient solutions for diverse crops and soils.' },
-      { icon: <FaChartLine />, title: 'Field Research & Trials', desc: 'On-site testing to ensure optimal results and innovation.' },
-      { icon: <FaUsers />, title: 'Farmer Education Workshops', desc: 'Training programs to empower farmers with best practices.' },
-      { icon: <FaGlobeAfrica />, title: 'Sustainable Supply Chain Consulting', desc: 'Building resilient, eco-friendly supply chains for agriculture.' },
+      { icon: <FaFlask />, title: 'Organic NPKC Fertilizer', desc: '100% organic, locally produced fertilizer for Ethiopian soils.' },
+      { icon: <FaChartLine />, title: 'Field Research & Trials', desc: 'On-site testing and innovation for Ethiopia’s diverse regions.' },
+      { icon: <FaUsers />, title: 'Farmer Education Workshops', desc: 'Training programs to empower Ethiopian farmers with best practices.' },
+      { icon: <FaGlobeAfrica />, title: 'Community & Environmental Restoration', desc: 'Reviving land, creating jobs, and building climate resilience in Ethiopia.' },
     ];
 
-    // Achievements
+    // Achievements (Ethiopia-focused)
     const achievements = [
-      { title: '50,000+ Farmers Empowered', org: 'Africa Soil Health Initiative' },
-      { title: 'Global Soil Fertility Award', org: 'International Agri Forum 2023' },
-      { title: 'Women in Agriculture Leadership', org: 'UN SDG Partnership' },
+      { title: 'Thousands of Farmers Empowered', org: 'Organic Soil Revival Initiative, Ethiopia' },
+      { title: 'Paradise Ethiopia Award', org: 'National Green Development Forum' },
+      { title: 'Women & Youth in Agriculture Leadership', org: 'Ethiopian Sustainable Development Network' },
     ];
 
     return (
@@ -75,7 +75,7 @@ class About extends Component {
                 <Card.Body>
                   <Card.Title style={{ fontWeight: 700 }}>Our Mission</Card.Title>
                   <Card.Text>
-                    Utopia is dedicated to transforming agriculture through science-based fertilizer solutions, improving yields, and supporting sustainable development worldwide. We empower farmers, protect the environment, and ensure food security for future generations.
+                    Utopia Organic Fertilizer Production Company (UOF) is dedicated to restoring Ethiopia’s land and ecosystems by producing 100% organic, locally sourced NPKC fertilizers. We empower farmers, regenerate the environment, and strive for a food-secure, sustainable future for Ethiopia.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -85,7 +85,8 @@ class About extends Component {
                 <Card.Body>
                   <Card.Title style={{ fontWeight: 700 }}>Our Vision</Card.Title>
                   <Card.Text>
-                    To be a global leader in sustainable fertilizer innovation, partnering with communities and organizations to build a resilient, food-secure world.
+                    “Fashioning Paradise Ethiopia through Organic Soil Revival.”<br />
+                    To transform Ethiopia into a paradise for development through joint power and wisdom.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -163,11 +164,8 @@ class About extends Component {
             <Button variant="primary" href="mailto:info@utopiafertilizer.com" className="me-3" style={{ background: "#234d20", border: "none" }}>
               <FaRegEnvelope className="me-2" />Contact Us
             </Button>
-            <a href="https://ifdc.org/solutions/" target="_blank" rel="noopener noreferrer" className="me-3">
+            <a href="https://www.linkedin.com/company/utopia-fertilizer" target="_blank" rel="noopener noreferrer" className="me-3">
               <FaGlobeAfrica size={30} color="#6dbb63" />
-            </a>
-            <a href="https://www.cgiar.org/" target="_blank" rel="noopener noreferrer">
-              <FaGlobeAfrica size={30} color="#b7e778" />
             </a>
           </div>
         </Container>

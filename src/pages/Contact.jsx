@@ -69,16 +69,16 @@ class Contact extends Component {
                       <FaEnvelope className="me-2" /> info@utopiafertilizer.com
                     </li>
                     <li>
-                      <FaPhoneAlt className="me-2" /> +251-960572142
+                      <FaPhoneAlt className="me-2" /> +251911401404, 0936727736
                     </li>
                     <li>
-                      <FaMapMarkerAlt className="me-2" /> Piassa Arada Building, Addis Ababa, Ethiopia
+                      <FaMapMarkerAlt className="me-2" /> kirkos sub city wereda 03, Addis Ababa, Ethiopia
                     </li>
                   </ul>
 
                   {/* Social & Resource Links */}
                   <div className="social-links mt-4">
-                    <a href="https://wa.me/251960572142" target="_blank" rel="noopener noreferrer" className="me-3" title="WhatsApp">
+                    <a href="https://wa.me/251911401404" target="_blank" rel="noopener noreferrer" className="me-3" title="WhatsApp">
                       <FaWhatsapp size={28} />
                     </a>
                     <a href="https://www.linkedin.com/company/utopia-fertilizer" target="_blank" rel="noopener noreferrer" className="me-3" title="LinkedIn">
