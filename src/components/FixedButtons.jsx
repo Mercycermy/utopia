@@ -8,7 +8,7 @@ class FixedButtons extends Component {
       <div className="fixed-buttons">
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/91960572142"
+          href="https://wa.me/251911401404"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed-btn whatsapp-btn"
@@ -19,7 +19,7 @@ class FixedButtons extends Component {
 
         {/* Call Button */}
         <a
-          href="tel:+91960572142"
+          href="tel:+251911401404"
           className="fixed-btn call-btn"
           title="Call Utopia Fertilizer"
         >

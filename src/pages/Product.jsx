@@ -101,7 +101,7 @@ class Products extends Component {
             <p className="lead mt-3">
               100% organic, locally produced solutions for Ethiopia’s soil revival and food security.
             </p>
-            <Button variant="success" href="/utopia/contact" className="mt-4 px-4 rounded-pill" style={{ background: '#234d20', border: 'none' }}>
+            <Button variant="success" href="/#/contact" className="mt-4 px-4 rounded-pill" style={{ background: '#234d20', border: 'none' }}>
               Request a Consultation
             </Button>
           </Container>
@@ -152,7 +152,7 @@ class Products extends Component {
         <section className="services-final-cta text-center py-5">
           <Container>
             <h2>Ready to Grow with Utopia?</h2>
-            <Button variant="primary" href="/utopia/contact" className="mt-3 px-4 rounded-pill" style={{ background: '#6dbb63', border: 'none' }}>
+            <Button variant="primary" href="/#/contact" className="mt-3 px-4 rounded-pill" style={{ background: '#6dbb63', border: 'none' }}>
               Contact Our Team
             </Button>
           </Container>
