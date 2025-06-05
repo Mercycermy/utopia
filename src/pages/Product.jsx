@@ -153,7 +153,7 @@ class Products extends Component {
           <Container>
             <h2>Ready to Grow with Utopia?</h2>
             <Button variant="primary" href="/#/contact" className="mt-3 px-4 rounded-pill" style={{ background: '#6dbb63', border: 'none' }}>
-              Contact Our Team
+              Contact Us
             </Button>
           </Container>
         </section>

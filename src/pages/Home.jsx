@@ -126,28 +126,28 @@ class Home extends Component {
                                     img: projectalpha1,
                                     desc: 'Rehabilitating Ethiopia’s arable land affected by acidity and salinity with organic NPKC fertilizers.',
                                     tech: ['Soil Restoration', 'Organic Inputs', 'Sustainability'],
-                                    link: '/projects/ethiopia-soil-restoration'
+                                   
                                 },
                                 {
                                     title: 'Empowering Smallholder Farmers',
                                     img: betaapp,
                                     desc: 'Training and supporting smallholder farmers for higher yields and sustainable livelihoods.',
                                     tech: ['Farmer Training', 'Community Impact', 'Food Security'],
-                                    link: '/projects/farmer-empowerment'
+                                    
                                 },
                                 {
                                     title: 'Women & Youth in Agriculture',
                                     img: womanImage,
                                     desc: 'Creating jobs and leadership opportunities for women and youth in Ethiopia’s green economy.',
                                     tech: ['Gender Equality', 'Youth Jobs', 'Education'],
-                                    link: '/projects/women-youth-agriculture'
+                                    
                                 },
                                 {
                                     title: 'Climate & Biodiversity Action',
                                     img: projectalpha1,
                                     desc: 'Reducing emissions, increasing biodiversity, and building climate resilience through organic practices.',
                                     tech: ['Climate Action', 'Biodiversity', 'Eco Farming'],
-                                    link: '/projects/climate-biodiversity'
+                                  
                                 }
                             ].map((proj, i) => (
                                 <Col md={6} lg={3} key={i}>

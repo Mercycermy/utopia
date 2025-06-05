@@ -102,7 +102,7 @@ class Initiative extends Component {
           <div className="text-center mt-5">
             <Button
               as="a"
-              href="/utopia/products"
+              href="/#/products"
               className="cta-btn"
               style={{ background: "#234d20", border: "none" }}
             >
