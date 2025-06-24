@@ -221,44 +221,80 @@
     letter-spacing: 1px;
     color: #234d20;
 }
+/* --- Testimonial Section Styles --- */
 
 .testimonial-card {
     background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 6px 20px rgba(34, 77, 32, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(34,77,32,0.07);
+    padding: 32px 24px 24px 24px;
+    min-height: 370px;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
-    padding: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 25px rgba(34, 77, 32, 0.1);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(34,77,32,0.13);
+}
+
+.testimonial-img {
+    width: 100px;         /* Increased size */
+    height: 100px;        /* Increased size */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #6dbb63;
+    box-shadow: 0 2px 8px rgba(34,77,32,0.10);
+    margin-bottom: 1rem;
+    background: #f4fbe7;
 }
 
 .testimonial-text {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     font-style: italic;
     color: #3d6b2f;
-}
-
-.quote-icon {
-    color: #6dbb63;
+    margin: 16px 0 8px 0;   /* Decreased bottom margin for less space */
+    min-height: 70px;
 }
 
 .testimonial-name {
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 8px;        /* Decreased top margin for less space */
     color: #234d20;
+    font-size: 1.1rem;
 }
 
 .testimonial-company {
-    font-size: 0.9rem;
+    font-size: 0.97rem;
     color: #6dbb2f;
+    margin-bottom: 10px;
 }
 
-.testimonial-rating {
+.quote-icon {
+    color: #6dbb63;
+    opacity: 0.7;
+}
+
+.btn-outline-success.btn-sm {
+    border-radius: 20px;
+    font-weight: 500;
+    padding: 4px 18px;
     margin-top: 10px;
+    border: 2px solid #6dbb63;
+    color: #6dbb63;
+    background: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline-success.btn-sm:hover {
+    background: #6dbb63;
+    color: #fff;
+    border-color: #6dbb63;
 }
 
 /* Our Process Section: Sustainable innovation */

@@ -3,11 +3,34 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { FaSeedling, FaLeaf, FaHandsHelping, FaCloudSun, FaArrowRight, FaFlask, FaUsers, FaChartLine, FaGlobeAfrica, FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Slider from "react-slick";
 import './Home.css';
 import aboutImage from '../assets/aboutus.jpg';
 import projectalpha1 from '../assets/projectalpha1.png';
 import betaapp from '../assets/betaapp.png';
 import womanImage from '../assets/woman.jpg';
+import Yihunpdf from '../assets/yihun.pdf';
+import Werksowpdf from '../assets/werksow.pdf';
+import Tedelapdf from '../assets/tedela.pdf';
+import mengistupdf from '../assets/mengistu.pdf';
+import Esuyakewalpdf from '../assets/esuyawkal.pdf';
+import gallery from '../assets/gallery.jpg';
+import gallery1 from '../assets/gallery1.jpg';
+import gallery2 from '../assets/gallery2.jpg';
+import gallery3 from '../assets/gallery3.jpg';
+import gallery4 from '../assets/gallery4.jpg';
+import gallery5 from '../assets/gallery5.jpg';
+import gallery6 from '../assets/gallery6.jpg';
+import Product from '../assets/product.jpg';
+import Product2  from '../assets/product2.jpg';
+import Product3 from '../assets/product3.jpg';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import MengistuImg from '../assets/Mengistu.jpeg';
+import EsuyawkalImg from '../assets/ESUYAWKAL AGMAS.jpeg';
+import YihunImg from '../assets/YIHUN WASIE.jpeg';
+import WerksowImg from '../assets/WERKSOW MOLLA.jpeg';
+import TedelaImg from '../assets/TEDELA MELESSE.jpeg';
 
 class Home extends Component {
     render() {
@@ -18,6 +41,71 @@ class Home extends Component {
             viewport: { once: true, amount: 0.4 },
             transition: { duration: 0.8 }
         };
+
+        // Slider settings for testimonials
+        const testimonialSliderSettings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3, // Show 3 testimonials at once
+            slidesToScroll: 1,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: { slidesToShow: 2 }
+                },
+                {
+                    breakpoint: 768,
+                    settings: { slidesToShow: 1 }
+                }
+            ]
+        };
+
+        // Testimonials data (add image property)
+        const testimonials = [
+            {
+                name: 'Mengistu Woube Mengesha',
+                role: 'Associate Professor & Senior Advisor',
+                feedback: 'Expert in sustainable agriculture, bridges academia and practical solutions for Ethiopian farmers.',
+                pdf: mengistupdf,
+                img: MengistuImg,
+            },
+            {
+                name: 'Esuyawkal Agmas Derso',
+                role: 'Founder & General Manager',
+                feedback: 'Visionary leader, patented Organic NPKC fertilizer, transformed soil health.',
+                pdf: Esuyakewalpdf,
+                img: EsuyawkalImg,
+            },
+            {
+                name: 'Yihun Wasie Anteneh',
+                role: 'Chemical Engineer & Lecturer',
+                feedback: 'Innovative research on controlled-release fertilizers, advanced product development.',
+                pdf: Yihunpdf,
+                img: YihunImg,
+            },
+            {
+                name: 'Werksow Molla',
+                role: 'Chemistry Lab Technician',
+                feedback: 'Meticulous lab work, ensures high-quality organic fertilizers.',
+                pdf: Werksowpdf,
+                img: WerksowImg,
+            },
+            {
+                name: 'Tedela Melesse Woldeyes',
+                role: 'Vice President & Co-Founder',
+                feedback: 'Strategic leadership, aviation logistics expertise, scaled operations.',
+                pdf: Tedelapdf,
+                img: TedelaImg,
+            },
+        ];
+
+        // Gallery images (gallery + products)
+        const galleryImages = [
+            gallery, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6,
+            Product, Product2, Product3
+        ];
 
         return (
             <div className="home-page">
@@ -246,47 +334,89 @@ class Home extends Component {
                     </Container>
                 </section>
 
-                {/* Testimonials Section */}
+                {/* Testimonials Section - Horizontal Slider */}
                 <section className="customer-feedback py-5 bg-light">
                     <Container>
                         <motion.div {...scrollAnim}>
                             <h2 className="text-center mb-4">What Our Partners Say</h2>
                         </motion.div>
+                        <Slider {...testimonialSliderSettings}>
+                            {testimonials.map((testimonial, idx) => (
+                                <div key={idx}>
+                                    <div className="d-flex justify-content-center">
+                                        <motion.div
+                                            className="testimonial-card p-4 text-center h-100 d-flex flex-column align-items-center justify-content-between mx-2"
+                                            {...scrollAnim}
+                                            style={{
+                                                background: '#fff',
+                                                borderRadius: '16px',
+                                                boxShadow: '0 2px 16px rgba(0,0,0,0.07)',
+                                                minHeight: 370,
+                                                maxWidth: 400,
+                                                margin: '0 auto'
+                                            }}
+                                        >
+                                            <img
+                                                src={testimonial.img}
+                                                alt={testimonial.name}
+                                                className="testimonial-img mb-3"
+                                                style={{
+                                                    width: 80,
+                                                    height: 80,
+                                                    objectFit: 'cover',
+                                                    borderRadius: '50%',
+                                                    border: '3px solid #6dbb63',
+                                                    boxShadow: '0 2px 8px rgba(34,77,32,0.10)',
+                                                }}
+                                            />
+                                            <p className="testimonial-text flex-grow-1">{testimonial.feedback}</p>
+                                            <h5 className="testimonial-name mt-3 mb-1">{testimonial.name}</h5>
+                                            <p className="testimonial-company mb-2">{testimonial.role}</p>
+                                            <a
+                                                href={testimonial.pdf}
+                                                download
+                                                className="btn btn-outline-success btn-sm"
+                                                style={{ borderRadius: '20px', fontWeight: 500 }}
+                                            >
+                                                Download PDF
+                                            </a>
+                                        </motion.div>
+                                    </div>
+                                </div>
+                            ))}
+                        </Slider>
+                    </Container>
+                </section>
+
+                {/* Gallery Section - All Gallery and Product Images */}
+                <section className="gallery-section py-5">
+                    <Container>
+                        <motion.div {...scrollAnim}>
+                            <h2 className="text-center mb-4">Gallery</h2>
+                            <p className="text-center text-muted mb-5">
+                                Explore our farms, products, and community activities.
+                            </p>
+                        </motion.div>
                         <Row className="g-4">
-                            {[
-                                {
-                                    name: 'Amina K.',
-                                    company: 'Smallholder Farmer, Oromia, Ethiopia',
-                                    feedback: 'Utopia’s organic fertilizer revived my land and doubled my harvest. I now have hope for my children’s future.',
-                                    rating: 5,
-                                },
-                                {
-                                    name: 'Dr. Samuel O.',
-                                    company: 'Agricultural Scientist, Addis Ababa, Ethiopia',
-                                    feedback: 'Their science-based, eco-friendly approach is a model for sustainable agriculture in Ethiopia.',
-                                    rating: 5,
-                                },
-                                {
-                                    name: 'Maria G.',
-                                    company: 'NGO Partner, Ethiopia',
-                                    feedback: 'Utopia’s training and community programs have empowered hundreds of women and youth in our region.',
-                                    rating: 5,
-                                }
-                            ].map((testimonial, idx) => (
-                                <Col md={4} key={idx}>
+                            {galleryImages.map((img, idx) => (
+                                <Col xs={12} sm={6} md={4} lg={3} key={idx}>
                                     <motion.div
-                                        className="testimonial-card p-4 text-center h-100"
-                                        {...scrollAnim}
-                                        transition={{ ...scrollAnim.transition, delay: 0.3 + idx * 0.2 }}
+                                        className="gallery-img-wrapper"
+                                        whileHover={{ scale: 1.04 }}
+                                        transition={{ type: 'spring', stiffness: 200 }}
+                                        style={{
+                                            borderRadius: '16px',
+                                            overflow: 'hidden',
+                                            boxShadow: '0 2px 16px rgba(0,0,0,0.08)',
+                                            background: '#fff'
+                                        }}
                                     >
-                                        <FaQuoteLeft className="quote-icon" size={30} />
-                                        <p className="testimonial-text">{testimonial.feedback}</p>
-                                        <FaQuoteRight className="quote-icon" size={30} />
-                                        <h5 className="testimonial-name">{testimonial.name}</h5>
-                                        <p className="testimonial-company">{testimonial.company}</p>
-                                        <div className="testimonial-rating">
-                                            {"⭐".repeat(Math.round(testimonial.rating))}
-                                        </div>
+                                        <img
+                                            src={img}
+                                            alt={`Gallery ${idx + 1}`}
+                                            className="img-fluid w-100"
+                                            style={{ objectFit: 'cover', height: '220px' }}
+                                        />
                                     </motion.div>
                                 </Col>
                             ))}
@@ -330,3 +460,4 @@ class Home extends Component {
 }
 
 export default Home;
+
