@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import { FaSeedling, FaLeaf, FaHandsHelping, FaCloudSun, FaArrowRight, FaFlask, FaUsers, FaChartLine, FaGlobeAfrica, FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { FaSeedling, FaLeaf, FaHandsHelping, FaCloudSun, FaArrowRight, FaFlask, FaBolt, FaBookOpen } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import './Home.css';
 import aboutImage from '../assets/aboutus.jpg';
-import projectalpha1 from '../assets/projectalpha1.png';
-import betaapp from '../assets/betaapp.png';
-import womanImage from '../assets/woman.jpg';
+import projectalpha1 from '../assets/image1.png';
+import betaapp from '../assets/image2.png';
+import womanImage from '../assets/image3.png';
+import climateImage from '../assets/image4.png';
 import Yihunpdf from '../assets/Yihun.pdf';
 import Werksowpdf from '../assets/Werksow.pdf';
 import Tedelapdf from '../assets/Tedela.pdf';
@@ -31,6 +32,7 @@ import EsuyawkalImg from '../assets/ESUYAWKAL AGMAS.jpeg';
 import YihunImg from '../assets/YIHUN WASIE.jpeg';
 import WerksowImg from '../assets/WERKSOW MOLLA.jpeg';
 import TedelaImg from '../assets/TEDELA MELESSE.jpeg';
+import DebarkUniversityLogo from '../assets/debark.png';
 
 class Home extends Component {
     render() {
@@ -139,7 +141,7 @@ class Home extends Component {
                                     transition={{ duration: 1.5, delay: 0.5 }}
                                 >
                                     <Button as={Link} to="/products" variant="primary" className="cta-btn">
-                                        Explore Our Products
+                                      Explore Our Natural Products
                                     </Button>
                                 </motion.div>
                             </Col>
@@ -232,7 +234,7 @@ class Home extends Component {
                                 },
                                 {
                                     title: 'Climate & Biodiversity Action',
-                                    img: projectalpha1,
+                                    img: climateImage,
                                     desc: 'Reducing emissions, increasing biodiversity, and building climate resilience through organic practices.',
                                     tech: ['Climate Action', 'Biodiversity', 'Eco Farming'],
                                   
@@ -287,27 +289,32 @@ class Home extends Component {
                         </motion.div>
                         <Row className="g-4">
                             {[
-                                {
-                                    icon: FaFlask,
-                                    title: 'Organic NPKC Fertilizer',
-                                    desc: 'Balanced, 100% organic fertilizer with Nitrogen, Phosphorus, Potassium, and Carbon for soil health.',
-                                },
-                                {
-                                    icon: FaChartLine,
-                                    title: 'Farmer Training & Consulting',
-                                    desc: 'Workshops, demo plots, and expert support for sustainable farming and soil management.',
-                                },
-                                {
-                                    icon: FaUsers,
-                                    title: 'Community Empowerment',
-                                    desc: 'Job creation, youth and women engagement, and rural economic growth.',
-                                },
-                                {
-                                    icon: FaGlobeAfrica,
-                                    title: 'Environmental Restoration',
-                                    desc: 'Land rehabilitation, biodiversity, and climate resilience for Ethiopia’s future.',
-                                },
-                            ].map((svc, i) => (
+  {
+    icon: FaLeaf,
+    title: 'General Organic Farming Consulting',
+    desc: 'Expert advice and support for transitioning to and optimizing organic farming practices.',
+  },
+  {
+    icon: FaSeedling,
+    title: 'Soil Fertility Testing',
+    desc: 'Comprehensive soil analysis to determine nutrient status and recommend improvements.',
+  },
+  {
+    icon: FaFlask,
+    title: 'Preparation of Natural Fertilizer & Compost',
+    desc: 'Guidance and training on making high-quality natural fertilizers and compost.',
+  },
+  {
+    icon: FaBolt,
+    title: 'Biogas Power Installation & Training',
+    desc: 'Installation of biogas systems and hands-on training for sustainable energy use.',
+  },
+  {
+    icon: FaBookOpen,
+    title: 'Training on By-Products & Cuttings for Development',
+    desc: 'Workshops on utilizing agricultural by-products and plant cuttings for further development.',
+  },
+].map((svc, i) => (
                                 <Col md={3} key={i}>
                                     <motion.div
                                         className="service-card p-4 text-center h-100"
@@ -327,6 +334,36 @@ class Home extends Component {
                                         >
                                             Learn More
                                         </Button>
+                                    </motion.div>
+                                </Col>
+                            ))}
+                        </Row>
+                    </Container>
+                </section>
+                   {/* Our Process Section */}
+                <section className="our-process py-5">
+                    <Container>
+                        <motion.div {...scrollAnim}>
+                            <h2 className="text-center mb-4">Our Process</h2>
+                        </motion.div>
+                        <Row className="g-4 justify-content-center">
+                            {[
+                                { step: '1', title: 'Soil Restoration', desc: 'Reviving degraded land with organic inputs and natural soil biology.' },
+                                { step: '2', title: 'Farmer Empowerment', desc: 'Training, consulting, and supporting Ethiopian farmers for sustainable growth.' },
+                                { step: '3', title: 'Community Impact', desc: 'Creating jobs, supporting women and youth, and building rural prosperity.' },
+                                { step: '4', title: 'Environmental Sustainability', desc: 'Reducing emissions, restoring biodiversity, and building climate resilience.' },
+                            ].map((process, idx) => (
+                                <Col md={6} lg={3} key={idx}>
+                                    <motion.div
+                                        className="h-100"
+                                        {...scrollAnim}
+                                        transition={{ ...scrollAnim.transition, delay: 0.3 + idx * 0.2 }}
+                                    >
+                                        <div className="process-step p-4 text-center d-flex flex-column justify-content-center h-100">
+                                            <h4>{process.step}</h4>
+                                            <h5>{process.title}</h5>
+                                            <p>{process.desc}</p>
+                                        </div>
                                     </motion.div>
                                 </Col>
                             ))}
@@ -424,33 +461,27 @@ class Home extends Component {
                     </Container>
                 </section>
 
-                {/* Our Process Section */}
-                <section className="our-process py-5">
+                {/* Partners Section */}
+                <section className="partners-section py-5 bg-white">
                     <Container>
                         <motion.div {...scrollAnim}>
-                            <h2 className="text-center mb-4">Our Process</h2>
+                            <h2 className="text-center mb-4">Our Partners</h2>
                         </motion.div>
-                        <Row className="g-4 justify-content-center">
-                            {[
-                                { step: '1', title: 'Soil Restoration', desc: 'Reviving degraded land with organic inputs and natural soil biology.' },
-                                { step: '2', title: 'Farmer Empowerment', desc: 'Training, consulting, and supporting Ethiopian farmers for sustainable growth.' },
-                                { step: '3', title: 'Community Impact', desc: 'Creating jobs, supporting women and youth, and building rural prosperity.' },
-                                { step: '4', title: 'Environmental Sustainability', desc: 'Reducing emissions, restoring biodiversity, and building climate resilience.' },
-                            ].map((process, idx) => (
-                                <Col md={6} lg={3} key={idx}>
-                                    <motion.div
-                                        className="h-100"
-                                        {...scrollAnim}
-                                        transition={{ ...scrollAnim.transition, delay: 0.3 + idx * 0.2 }}
-                                    >
-                                        <div className="process-step p-4 text-center d-flex flex-column justify-content-center h-100">
-                                            <h4>{process.step}</h4>
-                                            <h5>{process.title}</h5>
-                                            <p>{process.desc}</p>
-                                        </div>
-                                    </motion.div>
-                                </Col>
-                            ))}
+                        <Row className="justify-content-center align-items-center">
+                            <Col xs={12} md={4} className="text-center mb-4 mb-md-0">
+                                <div className="partner-card p-4 shadow-sm rounded" style={{ background: "#f4fbe7" }}>
+                                    <img
+                                        src={DebarkUniversityLogo} 
+                                        alt="Debark University"
+                                        style={{ maxWidth: 120, marginBottom: 16 }}
+                                    />
+                                    <h5 className="mt-2 mb-1" style={{ color: "#234d20" }}>Debark University</h5>
+                                    <p className="text-muted mb-0" style={{ fontSize: "1rem" }}>
+                                        Academic and research partner supporting sustainable agriculture and innovation.
+                                    </p>
+                                </div>
+                            </Col>
+                            {/* Add more partners here as needed */}
                         </Row>
                     </Container>
                 </section>

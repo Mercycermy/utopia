@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, Button, Accordion } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaLeaf, FaFlask, FaChartLine, FaUsers, FaGlobeAfrica, FaCloudSun, FaSeedling } from 'react-icons/fa';
+import { FaLeaf, FaCloudSun, FaFlask, FaBug } from 'react-icons/fa';
 import './Services.css';
 
 class Products extends Component {
@@ -16,63 +16,43 @@ class Products extends Component {
     // Utopia Fertilizer Product List 
     const productsList = [
       {
-        name: 'Utopia Organic NPKC Fertilizer',
+        name: '100% Natural NPKC Soil Fertilizer',
         icon: FaLeaf,
         features: [
-          '100% organic, locally produced in Ethiopia',
-          'Balanced nutrients: Nitrogen, Phosphorus, Potassium, Carbon',
-          'Restores soil health and fertility',
-          'Safe for all major Ethiopian crops'
-        ],
-      },
-      {
-        name: 'Soil Health Booster',
-        icon: FaSeedling,
-        features: [
+          'Completely natural and organic',
+          'Enriches soil with Nitrogen, Phosphorus, Potassium, and Carbon',
           'Improves soil structure and fertility',
-          'Enhances microbial activity',
-          'Reduces soil degradation',
-          'Ideal for Ethiopian smallholder farms'
+          'Safe for all crops and the environment'
         ],
       },
       {
-        name: 'ClimateSmart Fertilizer',
+        name: 'Carbon CO₂',
         icon: FaCloudSun,
         features: [
-          'Optimized for climate resilience in Ethiopia',
-          'Reduces greenhouse gas emissions',
-          'Supports sustainable agriculture',
-          'Boosts yields under changing weather'
+          'Enhances soil carbon content',
+          'Promotes microbial activity',
+          'Supports climate-smart agriculture',
+          'Boosts crop resilience and yield'
         ],
       },
       {
-        name: 'Custom Crop Solutions',
+        name: 'Natural NPK',
         icon: FaFlask,
         features: [
-          'Tailored blends for teff, maize, wheat, and more',
-          'Field-tested for Ethiopian soils',
-          'Expert agronomist support',
-          'Maximizes crop-specific yield'
+          'Natural source of essential plant nutrients',
+          'Balanced Nitrogen, Phosphorus, and Potassium',
+          'Improves plant growth and productivity',
+          'Suitable for a wide range of crops'
         ],
       },
       {
-        name: 'Farmer Training Kits',
-        icon: FaUsers,
+        name: 'Natural Herbicide and Insecticide',
+        icon: FaBug,
         features: [
-          'Step-by-step guides for best practices',
-          'Nutrient management education',
-          'Workshops and demo plots in Ethiopia',
-          'Empowers women and youth farmers'
-        ],
-      },
-      {
-        name: 'Supply Chain Consulting',
-        icon: FaGlobeAfrica,
-        features: [
-          'Sustainable sourcing strategies for Ethiopia',
-          'Distribution network optimization',
-          'Traceability and impact reporting',
-          'Community and environmental focus'
+          'Plant-based pest and weed control',
+          'Safe for beneficial insects and soil health',
+          'Reduces chemical pesticide reliance',
+          'Supports organic farming practices'
         ],
       },
     ];
@@ -97,9 +77,9 @@ class Products extends Component {
         {/* Hero Section */}
         <section className="services-hero text-center py-5" style={{ background: 'linear-gradient(90deg, #5fa948 0%, #b7e778 100%)', color: '#234d20' }}>
           <Container>
-            <h1 className="display-5 fw-bold">Utopia Fertilizer Products</h1>
+            <h1 className="display-5 fw-bold">Our Natural Products</h1>
             <p className="lead mt-3">
-              100% organic, locally produced solutions for Ethiopia’s soil revival and food security.
+              100% natural, organic solutions for soil health, crop protection, and sustainable farming in Ethiopia.
             </p>
             <Button variant="success" href="/#/contact" className="mt-4 px-4 rounded-pill" style={{ background: '#234d20', border: 'none' }}>
               Request a Consultation

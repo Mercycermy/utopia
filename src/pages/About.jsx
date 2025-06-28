@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, Button, ListGroup } from 'react-bootstrap';
 import {
-  FaRegEnvelope, FaGlobeAfrica, FaLeaf, FaHandsHelping, FaCloudSun, FaFlask, FaChartLine, FaUsers, FaTrophy
+  FaRegEnvelope, FaGlobeAfrica, FaLeaf, FaHandsHelping, FaCloudSun, FaFlask, FaChartLine, FaUsers, FaTrophy, FaSeedling, FaBolt, FaBookOpen
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './About.css';
@@ -47,12 +47,13 @@ class About extends Component {
       { year: '2024', text: 'Expanded organic fertilizer production and community partnerships nationwide.', icon: <FaCloudSun /> },
     ];
 
-    // Utopia services (Ethiopia-focused)
+    // Updated Utopia services (reference utopia doc file)
     const services = [
-      { icon: <FaFlask />, title: 'Organic NPKC Fertilizer', desc: '100% organic, locally produced fertilizer for Ethiopian soils.' },
-      { icon: <FaChartLine />, title: 'Field Research & Trials', desc: 'On-site testing and innovation for Ethiopia’s diverse regions.' },
-      { icon: <FaUsers />, title: 'Farmer Education Workshops', desc: 'Training programs to empower Ethiopian farmers with best practices.' },
-      { icon: <FaGlobeAfrica />, title: 'Community & Environmental Restoration', desc: 'Reviving land, creating jobs, and building climate resilience in Ethiopia.' },
+      { icon: <FaLeaf />, title: 'General Organic Farming Consulting', desc: 'Expert advice and support for transitioning to and optimizing organic farming practices.' },
+      { icon: <FaSeedling />, title: 'Soil Fertility Testing', desc: 'Comprehensive soil analysis to determine nutrient status and recommend improvements.' },
+      { icon: <FaFlask />, title: 'Preparation of Natural Fertilizer & Compost', desc: 'Guidance and training on making high-quality natural fertilizers and compost.' },
+      { icon: <FaBolt />, title: 'Biogas Power Installation & Training', desc: 'Installation of biogas systems and hands-on training for sustainable energy use.' },
+      { icon: <FaBookOpen />, title: 'Training on By-Products & Cuttings for Development', desc: 'Workshops on utilizing agricultural by-products and plant cuttings for further development.' },
     ];
 
     // Achievements (Ethiopia-focused)
@@ -67,6 +68,30 @@ class About extends Component {
         <Container className="about-page py-5" style={{ backgroundColor: "#f4fbe7" }}>
           {/* Title */}
           <h2 className="text-center mb-5" style={{ color: "#234d20", fontWeight: 800 }}>About Utopia</h2>
+
+         {/* Company Profile Section */}
+<Row className="gx-4 gy-4 mb-5">
+  <Col>
+    <Card className="shadow-sm mb-4" style={{ background: "#fff", color: "#234d20" }}>
+      <Card.Body>
+        <Card.Title style={{ fontWeight: 700, fontSize: "1.5rem" }}>Company Profile</Card.Title>
+        <Card.Text>
+          <strong>Who We Are</strong><br />
+          Founded in 2023, <strong>UTOPIA</strong> is a forward-thinking organization led by a multidisciplinary team of urban planners, architects, and sustainability experts. Established in Nairobi, Kenya, UTOPIA was born out of a shared commitment to reimagining Africa’s urban future—one that is inclusive, resilient, and sustainable.
+          <br /><br />
+
+          <strong>Our Approach</strong><br />
+          At UTOPIA, we believe that transformative change starts with people. That’s why our methodology emphasizes deep collaboration with local governments, private sector stakeholders, and community-based organizations. Through participatory design, data-driven planning, and cutting-edge technologies, we deliver solutions that are context-specific and scalable across the continent.
+          <br /><br />
+
+          <strong>Our Journey</strong><br />
+          Since our founding, UTOPIA has earned recognition for pioneering work in affordable housing, green infrastructure, and community-centered urban design. What began as a local initiative has grown into a pan-African movement, empowering cities to lead with vision and implement with impact. Our story continues as we work to make every African city a thriving model of sustainable development.
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  </Col>
+</Row>
+
 
           {/* Mission & Vision */}
           <Row className="gx-4 gy-4 mb-5">
