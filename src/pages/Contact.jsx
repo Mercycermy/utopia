@@ -89,24 +89,13 @@ class Contact extends Component {
                     </a>
                   </div>
 
-                  {/* Calendar Booking */}
-                  <div className="calendar-box mt-4">
-                    <h5>Schedule a Meeting 📅</h5>
-                    <Button
-                      variant="outline-primary"
-                      href="https://calendly.com/utopiafertilizer/30min"
-                      target="_blank"
-                      className="mt-2"
-                    >
-                      Book via Calendly
-                    </Button>
-                  </div>
+                 
                 </Card>
 
                 {/* Map Embed */}
                 <Card className="mt-4 map-card shadow overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3405950397955!2d38.749995773612106!3d9.032662088934519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b855999d29f4b%3A0x99338fc20315ddde!2sPiassa%20Arada%20building!5e0!3m2!1sen!2set!4v1747763452993!5m2!1sen!2set"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3939.946661985991!2d38.770454!3d9.068624000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDQnMDcuMSJOIDM4wrA0NicxMy42IkU!5e0!3m2!1sen!2set!4v1751313870215!5m2!1sen!2set"
                     width="100%"
                     height="250"
                     style={{ border: 0 }}

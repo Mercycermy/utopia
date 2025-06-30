@@ -10,11 +10,6 @@ import projectalpha1 from '../assets/image1.png';
 import betaapp from '../assets/image2.png';
 import womanImage from '../assets/image3.png';
 import climateImage from '../assets/image4.png';
-import Yihunpdf from '../assets/Yihun.pdf';
-import Werksowpdf from '../assets/Werksow.pdf';
-import Tedelapdf from '../assets/Tedela.pdf';
-import mengistupdf from '../assets/Mengistu.pdf';
-import Esuyakewalpdf from '../assets/Esuyawkal.pdf';
 import gallery from '../assets/gallery.jpg';
 import gallery1 from '../assets/gallery1.jpg';
 import gallery2 from '../assets/gallery2.jpg';
@@ -33,6 +28,7 @@ import YihunImg from '../assets/YIHUN WASIE.jpeg';
 import WerksowImg from '../assets/WERKSOW MOLLA.jpeg';
 import TedelaImg from '../assets/TEDELA MELESSE.jpeg';
 import DebarkUniversityLogo from '../assets/debark.png';
+import MandefroImg from '../assets/MANDEFRO.png'; // Make sure this image exists
 
 class Home extends Component {
     render() {
@@ -64,42 +60,49 @@ class Home extends Component {
             ]
         };
 
-        // Testimonials data (add image property)
+        // Testimonials data (with hover descriptions)
         const testimonials = [
             {
-                name: 'Mengistu Woube Mengesha',
-                role: 'Associate Professor & Senior Advisor',
-                feedback: 'Expert in sustainable agriculture, bridges academia and practical solutions for Ethiopian farmers.',
-                pdf: mengistupdf,
-                img: MengistuImg,
-            },
-            {
-                name: 'Esuyawkal Agmas Derso',
-                role: 'Founder & General Manager',
-                feedback: 'Visionary leader, patented Organic NPKC fertilizer, transformed soil health.',
-                pdf: Esuyakewalpdf,
-                img: EsuyawkalImg,
-            },
-            {
-                name: 'Yihun Wasie Anteneh',
-                role: 'Chemical Engineer & Lecturer',
-                feedback: 'Innovative research on controlled-release fertilizers, advanced product development.',
-                pdf: Yihunpdf,
-                img: YihunImg,
-            },
-            {
                 name: 'Werksow Molla',
-                role: 'Chemistry Lab Technician',
-                feedback: 'Meticulous lab work, ensures high-quality organic fertilizers.',
-                pdf: Werksowpdf,
+                role: 'Chemical Laboratory Chemist & Teacher',
                 img: WerksowImg,
+                feedback: 'Utopia’s commitment to quality and innovation in organic fertilizer production has transformed our laboratory standards and inspired a culture of excellence.',
+                hoverDesc: 'Skilled in analytical chemistry, sample preparation, and instrument calibration, Werksow has significantly enhanced laboratory efficiency. His meticulous record-keeping and commitment to safety and training underscore his dedication to sustainable agricultural solutions. He also brings teaching experience, fostering student engagement and academic growth at Gibson School Systems.'
             },
             {
                 name: 'Tedela Melesse Woldeyes',
                 role: 'Vice President & Co-Founder',
-                feedback: 'Strategic leadership, aviation logistics expertise, scaled operations.',
-                pdf: Tedelapdf,
                 img: TedelaImg,
+                feedback: 'Utopia’s vision for sustainable agriculture and food security is making a real difference for Ethiopian farmers and the environment.',
+                hoverDesc: 'As Vice President, he provides strategic oversight, fosters international partnerships, and advocates for Ethiopia’s self-reliance in organic farming. His expertise in operations, logistics, and stakeholder engagement has been instrumental in scaling Utopia’s mission.'
+            },
+            {
+                name: 'Yihun Wasie Anteneh',
+                role: 'Lecturer & Process Engineer',
+                img: YihunImg,
+                feedback: 'The scientific approach and dedication to research at Utopia are setting new benchmarks for agricultural innovation in Ethiopia.',
+                hoverDesc: 'He combines academic rigor with hands-on research to advance sustainable agriculture. His published work and active role in Utopia highlight his commitment to improving Ethiopia’s agricultural productivity through science.'
+            },
+            {
+                name: 'Mengistu Woube Mengesha',
+                role: 'Associate Professor & Senior Advisor',
+                img: MengistuImg,
+                feedback: 'Utopia’s leadership in organic farming and environmental stewardship is shaping a brighter, more resilient future for our communities.',
+                hoverDesc: 'With a Ph.D. in Human Geography, he bridges academia and industry, guiding Utopia’s strategic direction and sustainability initiatives. His leadership spans research, training, and advocacy for organic farming practices.'
+            },
+            {
+                name: 'Esuyawkal Agmas Derso',
+                role: 'Founder & General Manager',
+                img: EsuyawkalImg,
+                feedback: 'Utopia’s impact on soil health and farmer livelihoods is a testament to the power of innovation and purpose-driven leadership.',
+                hoverDesc: 'His entrepreneurial drive focuses on scaling production, scientific innovation, and farmer training. He aims to make Utopia a model for sustainable agriculture across Africa.'
+            },
+            {
+                name: 'Mandefro Kindeneh Assefa',
+                role: 'Customer Service Specialist & Science Department Head',
+                img: MandefroImg,
+                feedback: 'Utopia’s focus on research and customer support bridges the gap between scientific advancement and real-world agricultural solutions.',
+                hoverDesc: 'As the architect of the organic NPKC kinetics model, his technical contributions are foundational to the company’s growth. His dual role in customer service at Enat Bank showcases his versatility in bridging scientific innovation and client-focused solutions.'
             },
         ];
 
@@ -390,7 +393,9 @@ class Home extends Component {
                                                 boxShadow: '0 2px 16px rgba(0,0,0,0.07)',
                                                 minHeight: 370,
                                                 maxWidth: 400,
-                                                margin: '0 auto'
+                                                margin: '0 auto',
+                                                position: 'relative',
+                                                overflow: 'visible'
                                             }}
                                         >
                                             <img
@@ -398,8 +403,8 @@ class Home extends Component {
                                                 alt={testimonial.name}
                                                 className="testimonial-img mb-3"
                                                 style={{
-                                                    width: 80,
-                                                    height: 80,
+                                                    width: 100,
+                                                    height: 100,
                                                     objectFit: 'cover',
                                                     borderRadius: '50%',
                                                     border: '3px solid #6dbb63',
@@ -407,16 +412,12 @@ class Home extends Component {
                                                 }}
                                             />
                                             <p className="testimonial-text flex-grow-1">{testimonial.feedback}</p>
-                                            <h5 className="testimonial-name mt-3 mb-1">{testimonial.name}</h5>
+                                            <h5 className="testimonial-name mt-2 mb-1">{testimonial.name}</h5>
                                             <p className="testimonial-company mb-2">{testimonial.role}</p>
-                                            <a
-                                                href={testimonial.pdf}
-                                                download
-                                                className="btn btn-outline-success btn-sm"
-                                                style={{ borderRadius: '20px', fontWeight: 500 }}
-                                            >
-                                                Download PDF
-                                            </a>
+                                            {/* Hover overlay for description */}
+                                            <div className="testimonial-hover-desc">
+                                                <span>{testimonial.hoverDesc}</span>
+                                            </div>
                                         </motion.div>
                                     </div>
                                 </div>
