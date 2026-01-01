@@ -11,7 +11,12 @@ class Contact extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_t8qf0ss', 'template_85p1rie', e.target, 'uQ4nx4nVltounCMff')
+    emailjs.sendForm(
+      'service_xvrxqp7', // Service ID
+      'template_e04sk69', // Template ID
+      e.target,
+      '47W1VeLGBhasjhak1' // Public Key
+    )
       .then((result) => {
         alert('Message sent successfully!');
       }, (error) => {
@@ -20,6 +25,7 @@ class Contact extends Component {
 
     e.target.reset();
   }
+
   render() {
     const fadeIn = {
       initial: { opacity: 0, y: 20 },
@@ -40,17 +46,33 @@ class Contact extends Component {
                   <Form onSubmit={this.handleSubmit}>
                     <Form.Group className="mb-4" controlId="name">
                       <Form.Label>Name</Form.Label>
-                      <Form.Control type="text" placeholder="Your Name" name="user_name" required />
+                      <Form.Control
+                        type="text"
+                        placeholder="Your Name"
+                        name="from_name"
+                        required
+                      />
                     </Form.Group>
 
                     <Form.Group className="mb-4" controlId="email">
                       <Form.Label>Email</Form.Label>
-                      <Form.Control type="email" placeholder="your@email.com" name="user_email" required />
+                      <Form.Control
+                        type="email"
+                        placeholder="your@email.com"
+                        name="from_email"
+                        required
+                      />
                     </Form.Group>
 
                     <Form.Group className="mb-4" controlId="message">
                       <Form.Label>Message</Form.Label>
-                      <Form.Control as="textarea" rows={4} placeholder="Write your message..." name="message" required />
+                      <Form.Control
+                        as="textarea"
+                        rows={4}
+                        placeholder="Write your message..."
+                        name="message"
+                        required
+                      />
                     </Form.Group>
 
                     <Button variant="primary" type="submit" className="w-100">
@@ -88,8 +110,6 @@ class Contact extends Component {
                       <FaEnvelope size={28} color="#b7e778" />
                     </a>
                   </div>
-
-                 
                 </Card>
 
                 {/* Map Embed */}

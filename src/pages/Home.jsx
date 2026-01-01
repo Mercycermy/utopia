@@ -67,7 +67,7 @@ class Home extends Component {
                 role: 'Chemical Laboratory Chemist & Teacher',
                 img: WerksowImg,
                 feedback: 'Utopia’s commitment to quality and innovation in organic fertilizer production has transformed our laboratory standards and inspired a culture of excellence.',
-                hoverDesc: 'Skilled in analytical chemistry, sample preparation, and instrument calibration, Werksow has significantly enhanced laboratory efficiency. His meticulous record-keeping and commitment to safety and training underscore his dedication to sustainable agricultural solutions. He also brings teaching experience, fostering student engagement and academic growth at Gibson School Systems.'
+                hoverDesc: 'Chemistry Lab Technician at Utopia Organic Fertilizer Plc. with a strong track record in analytical chemistry and laboratory efficiency. Expert in instrument calibration, data management, and workflow optimization. Dedicated to continuous learning and collaborative teamwork to ensure accurate and timely sample analysis.Actively mentors junior technicians, fostering a culture of skill development and ensuring the continuity of high-quality laboratory practices.Committed to maintaining a safe and compliant laboratory environment, adhering to all relevant regulations and best practices in chemical handling'
             },
             {
                 name: 'Tedela Melesse Woldeyes',

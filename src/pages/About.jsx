@@ -69,29 +69,28 @@ class About extends Component {
           {/* Title */}
           <h2 className="text-center mb-5" style={{ color: "#234d20", fontWeight: 800 }}>About Utopia</h2>
 
-         {/* Company Profile Section */}
-<Row className="gx-4 gy-4 mb-5">
-  <Col>
-    <Card className="shadow-sm mb-4" style={{ background: "#fff", color: "#234d20" }}>
-      <Card.Body>
-        <Card.Title style={{ fontWeight: 700, fontSize: "1.5rem" }}>Company Profile</Card.Title>
-        <Card.Text>
-          <strong>Who We Are</strong><br />
-          Founded in 2023, <strong>UTOPIA</strong> is a forward-thinking organization led by a multidisciplinary team of urban planners, architects, and sustainability experts. Established in Nairobi, Kenya, UTOPIA was born out of a shared commitment to reimagining Africa’s urban future—one that is inclusive, resilient, and sustainable.
-          <br /><br />
+          {/* Company Profile Section */}
+          <Row className="gx-4 gy-4 mb-5">
+            <Col>
+              <Card className="shadow-sm mb-4" style={{ background: "#fff", color: "#234d20" }}>
+                <Card.Body>
+                  <Card.Title style={{ fontWeight: 700, fontSize: "1.5rem" }}>Company Profile</Card.Title>
+                  <Card.Text>
+                    <strong>Who We Are</strong><br />
+                    Founded in 2023, <strong>UTOPIA</strong> is a forward-thinking organization led by a multidisciplinary team of urban planners, architects, and sustainability experts. Established in Nairobi, Kenya, UTOPIA was born out of a shared commitment to reimagining Africa’s urban future—one that is inclusive, resilient, and sustainable.
+                    <br /><br />
 
-          <strong>Our Approach</strong><br />
-          At UTOPIA, we believe that transformative change starts with people. That’s why our methodology emphasizes deep collaboration with local governments, private sector stakeholders, and community-based organizations. Through participatory design, data-driven planning, and cutting-edge technologies, we deliver solutions that are context-specific and scalable across the continent.
-          <br /><br />
+                    <strong>Our Approach</strong><br />
+                    At UTOPIA, we believe that transformative change starts with people. That’s why our methodology emphasizes deep collaboration with local governments, private sector stakeholders, and community-based organizations. Through participatory design, data-driven planning, and cutting-edge technologies, we deliver solutions that are context-specific and scalable across the continent.
+                    <br /><br />
 
-          <strong>Our Journey</strong><br />
-          Since our founding, UTOPIA has earned recognition for pioneering work in affordable housing, green infrastructure, and community-centered urban design. What began as a local initiative has grown into a pan-African movement, empowering cities to lead with vision and implement with impact. Our story continues as we work to make every African city a thriving model of sustainable development.
-        </Card.Text>
-      </Card.Body>
-    </Card>
-  </Col>
-</Row>
-
+                    <strong>Our Journey</strong><br />
+                    Since our founding, UTOPIA has earned recognition for pioneering work in affordable housing, green infrastructure, and community-centered urban design. What began as a local initiative has grown into a pan-African movement, empowering cities to lead with vision and implement with impact. Our story continues as we work to make every African city a thriving model of sustainable development.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
 
           {/* Mission & Vision */}
           <Row className="gx-4 gy-4 mb-5">
@@ -139,20 +138,48 @@ class About extends Component {
           {/* Timeline */}
           <h3 className="mt-5 mb-3 text-center" style={{ color: "#234d20" }}>Our Journey</h3>
           <div className="timeline-container mb-5">
-            {timeline.map((item, idx) => (
-              <motion.div
-                className="timeline-item"
-                key={idx}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
-              >
-                <div className="timeline-year">{item.year}</div>
-                <div className="timeline-icon">{item.icon}</div>
-                <div className="timeline-content">{item.text}</div>
-              </motion.div>
-            ))}
+            <motion.div
+              className="timeline-item"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="timeline-year">2023</div>
+              <div className="timeline-content">
+                Founded UOF in Ethiopia (Oct 2023) to restore soil health via organic NPKC fertilizers.<br />
+                Secured industrial land near Addis Ababa.
+              </div>
+            </motion.div>
+            <motion.div
+              className="timeline-item"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="timeline-year">2024</div>
+              <div className="timeline-content">
+                Organic NPKC fertilizer certified by Ethiopian Conformity Assessment Enterprise (ECAE).<br />
+                Patented fertilizer formula/process with Ethiopian Intellectual Property Authority (EIPA).<br />
+                Partnered with Ministry of Agriculture for technical support and national programs.<br />
+                Launched community outreach and farmer engagement.
+              </div>
+            </motion.div>
+            <motion.div
+              className="timeline-item"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <div className="timeline-year">2025</div>
+              <div className="timeline-content">
+                Launched “Fashioning Paradise Ethiopia” for soil health and food security.<br />
+                Began production facility setup for pilot-scale operations.<br />
+                Expanded partnerships with cooperatives, NGOs, and research institutions.
+              </div>
+            </motion.div>
           </div>
 
           {/* Services */}
@@ -176,11 +203,21 @@ class About extends Component {
           {/* Achievements */}
           <h3 className="mt-5 mb-4 text-center" style={{ color: "#234d20" }}>Achievements</h3>
           <ListGroup className="mb-5">
-            {achievements.map((a, i) => (
-              <ListGroup.Item key={i} className="achievement-item" style={{ fontWeight: 500 }}>
-                <FaTrophy className="me-2 text-warning" /> <strong>{a.title}</strong> — {a.org}
-              </ListGroup.Item>
-            ))}
+            <ListGroup.Item className="achievement-item" style={{ fontWeight: 500 }}>
+              <FaTrophy className="me-2 text-warning" /> <strong>Certified Product</strong> — NPKC fertilizer certified by ECAE for quality and sustainability.
+            </ListGroup.Item>
+            <ListGroup.Item className="achievement-item" style={{ fontWeight: 500 }}>
+              <FaTrophy className="me-2 text-warning" /> <strong>Patented Formula</strong> — Secured EIPA patent for innovative fertilizer process.
+            </ListGroup.Item>
+            <ListGroup.Item className="achievement-item" style={{ fontWeight: 500 }}>
+              <FaTrophy className="me-2 text-warning" /> <strong>Government Partnership</strong> — Collaborated with Ministry of Agriculture for national impact.
+            </ListGroup.Item>
+            <ListGroup.Item className="achievement-item" style={{ fontWeight: 500 }}>
+              <FaTrophy className="me-2 text-warning" /> <strong>Community Outreach</strong> — Engaged farmers to promote organic fertilizer adoption.
+            </ListGroup.Item>
+            <ListGroup.Item className="achievement-item" style={{ fontWeight: 500 }}>
+              <FaTrophy className="me-2 text-warning" /> <strong>Strategic Location</strong> — Secured production site near Addis Ababa for scalability.
+            </ListGroup.Item>
           </ListGroup>
 
           {/* Contact CTA */}
