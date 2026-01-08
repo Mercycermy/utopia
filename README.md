@@ -2,11 +2,6 @@
 
 A customizable React + Vite portfolio template with example pages (Home, About, Contact, Products, Initiatives), Bootstrap-based UI, Framer Motion animations, EmailJS contact integration, and PDF export support. Ready for local development and production builds.
 
-Key features:
-
-
-Tech stack:
-
 Setup:
 
 1. Install dependencies:
