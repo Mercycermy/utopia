@@ -1,12 +1,39 @@
-# React + Vite
+# <PROJECT_NAME>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A customizable React + Vite portfolio template with example pages (Home, About, Contact, Products, Initiatives), Bootstrap-based UI, Framer Motion animations, EmailJS contact integration, and PDF export support. Ready for local development and production builds.
 
-Currently, two official plugins are available:
+Key features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+Tech stack:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Setup:
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Copy `.env.example` to `.env` and update values.
+
+Run locally:
+
+```bash
+npm run dev
+```
+
+Build:
+
+```bash
+npm run build
+npm run preview
+```
+
+Example:
+
+- Open http://localhost:5173 after starting the dev server.
+
+License:
+
+MIT — replace with your preferred license.
